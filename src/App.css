@@ -1,0 +1,155 @@
+.app {
+  width: min(760px, 96vw);
+  margin: 3rem auto;
+  padding: 1.5rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.app-header {
+  text-align: left;
+  margin-bottom: 1.25rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+.app-header p {
+  margin-top: 0.35rem;
+  color: #666;
+}
+
+.new-todo-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.new-todo-form input {
+  flex: 1;
+}
+
+input[type='text'] {
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  padding: 0.7rem 0.8rem;
+  font-size: 0.95rem;
+}
+
+button {
+  border: 1px solid #2f6fed;
+  background: #2f6fed;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.62rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filters button,
+.clear-completed,
+.item-actions button,
+.edit-form button {
+  background: #f4f6fb;
+  color: #0b1f48;
+  border-color: #d8e1f7;
+}
+
+.filters button.active {
+  background: #2f6fed;
+  color: #fff;
+  border-color: #2f6fed;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.todo-item {
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.todo-item.done .todo-text {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.todo-text {
+  flex: 1;
+  text-align: left;
+  word-break: break-word;
+}
+
+.item-actions {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.edit-form {
+  flex: 1;
+  display: flex;
+  gap: 0.45rem;
+}
+
+.edit-form input {
+  flex: 1;
+}
+
+.empty-state {
+  border: 1px dashed #d5dbe7;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #6d7790;
+}
+
+@media (max-width: 640px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .new-todo-form {
+    flex-direction: column;
+  }
+
+  .todo-item {
+    flex-wrap: wrap;
+  }
+
+  .item-actions {
+    margin-left: auto;
+  }
+}
